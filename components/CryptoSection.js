@@ -1,4 +1,4 @@
-import style from "../../styles/CryptoSection.module.scss";
+import style from "../styles/CryptoSection.module.scss";
 import Image from "next/image";
 import CryptoItem from "./CryptoItem";
 

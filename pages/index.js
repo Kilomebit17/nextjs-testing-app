@@ -1,9 +1,9 @@
 import style from "../styles/Index.module.scss";
-import Header from "./components/Header";
-import CryptoSection from "./components/CryptoSection";
-import ProsSaying from "./components/ProsSaying";
-import OtherSaying from "./components/OtherSaying";
-import Footer from "./components/Footer";
+import Header from "../components/Header";
+import CryptoSection from "../components/CryptoSection";
+import ProsSaying from "../components/ProsSaying";
+import OtherSaying from "../components/OtherSaying";
+import Footer from "../components/Footer";
 import Head from "next/head";
 
 export default function Index({ crypto }) {
