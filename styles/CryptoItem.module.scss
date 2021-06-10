@@ -1,0 +1,40 @@
+.crypto {
+  width: 250px;
+
+  &__title {
+    color: #12121F;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+
+    span {
+      margin-left: 10px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 23px;
+      font-weight: 600;
+      color: #12121F;
+    }
+
+  }
+}
+
+.description {
+  color: #AFAFBD;
+  font-size: 11px;
+  display: block;
+}
+@media (max-width: 425px) {
+  .crypto {
+    &__price {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

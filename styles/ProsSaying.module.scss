@@ -1,0 +1,58 @@
+.main {
+  margin:100px 0;
+  text-align: center;
+  &__title {
+    font-size: 32.9px;
+    font-weight: bold;
+    font-family: "Montserrat",sans-serif;
+  }
+  &__users {
+    display: flex;
+    justify-content: center;
+  }
+  .user {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 21.975px;
+    width: 250px;
+    margin: 35px 20px;
+    padding:20px 10px;
+    box-shadow: 0 2.84946px 28.4946px rgba(0, 0, 0, 0.25);
+
+    .nickname {
+      display: block;
+      font-size: 17px;
+      color: #000;
+      font-weight: 700;
+      font-family: "Montserrat",sans-serif;
+      padding-top: 10px;
+    }
+    .description {
+      font-family: "Montserrat",sans-serif;
+      padding:50px 20px;
+      font-size: 19px;
+      font-weight: 300;
+
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    &__users {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .main {
+    .user {
+      margin: 25px 20px;
+      .description {
+        padding:20px 20px;
+      }
+    }
+  }
+}

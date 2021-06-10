@@ -1,0 +1,19 @@
+.under__header {
+  margin-top: 80px;
+  span {
+    color: #212353;
+    display: block;
+    font-size: 58px;
+    font-weight: bold;
+    font-family: 'Montserrat',sans-serif;
+  }
+}
+
+@media (max-width: 375px) {
+  .under__header {
+    margin-top: 10px;
+    span {
+    font-size: 33px;
+    }
+  }
+}

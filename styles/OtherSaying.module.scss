@@ -1,0 +1,57 @@
+.main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .title {
+    font-size: 32px;
+    color: #212353;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .comments {
+    background-color: #3664D8;
+    border-radius: 75px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .assessment {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right:10px;
+      .time {
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .comment_u {
+      display: flex;
+      align-items: center;
+
+      .comment {
+        margin-left: 10px;
+
+        .comment__txt {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .comment__nickname {
+          font-family: "Montserrat", sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: #fff;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
