@@ -6,7 +6,7 @@ import OtherSaying from "./components/OtherSaying";
 import Footer from "./components/Footer";
 import Head from "next/head";
 
-export default function Index(data) {
+export default function Index({ crypto }) {
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ export default function Index(data) {
           <span>And Have Fun</span>
         </div>
 
-        <CryptoSection data={data.crypto} />
+        <CryptoSection data={crypto} />
         <div className={"content"}>
           <ProsSaying />
           <OtherSaying />
@@ -35,7 +35,7 @@ export async function getStaticProps(context) {
   const res = await fetch(
     `https://nextjs-oldv2a5z5-kilomebit17.vercel.app/api/crypto`
   );
-  const crypto = await res.json();
+  const { crypto } = await res.json();
   return {
     props: { crypto }, // will be passed to the page component as props
   };

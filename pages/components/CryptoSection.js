@@ -3,7 +3,7 @@ import Image from "next/image";
 import CryptoItem from "./CryptoItem";
 
 const CryptoSection = ({ data }) => {
-  const cryptoItemNodeList = data.crypto.map(
+  const cryptoItemNodeList = data.map(
     ({ id, name, price, description, percent }) => {
       return (
         <CryptoItem
