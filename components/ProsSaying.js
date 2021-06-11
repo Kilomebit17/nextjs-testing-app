@@ -1,49 +1,34 @@
+import { useMemo } from "react";
 import s from "../styles/ProsSaying.module.scss";
-import Image from "next/image";
+import Pro from "./Pro";
 
 const ProsSaying = () => {
+  const pros = useMemo(
+    () =>
+      [
+        {
+          img: { src: "/media/Nia.png", alt: "Picture of the author" },
+          nickname: "Nia",
+          description: "“This task can be perfect for students from FIT””",
+        },
+        {
+          img: { src: "/media/Abigale.png", alt: "Picture of the author" },
+          nickname: "Abigale",
+          description:
+            "“I am so sexy, that men are doing  test tasks for me for free.”“Kuku Epta. EZ Task.”",
+        },
+        {
+          img: { src: "/media/Fedya.png", alt: "Picture of the author" },
+          nickname: "Fedya",
+          description: "“Kuku Epta. EZ Task.”",
+        },
+      ].map((v) => <Pro {...v} />),
+    []
+  );
   return (
     <div className={s.main}>
       <h1 className={s.main__title}>What Pros Are Saying...</h1>
-      <div className={s.main__users}>
-        <div className={s.user}>
-          <Image
-            src="/media/Nia.png"
-            alt="Picture of the author"
-            width={76}
-            height={76}
-          />
-          <span className={s.nickname}>Nia</span>
-
-          <div className={s.description}>
-            “This task can be perfect for students from FIT”
-          </div>
-        </div>
-        <div className={s.user}>
-          <Image
-            src="/media/Abigale.png"
-            alt="Picture of the author"
-            width={76}
-            height={76}
-          />
-          <span className={s.nickname}>Abigale</span>
-
-          <div className={s.description}>
-            “I am so sexy, that men are doing test tasks for me for free.”
-          </div>
-        </div>
-        <div className={s.user}>
-          <Image
-            src="/media/Fedya.png"
-            alt="Picture of the author"
-            width={76}
-            height={76}
-          />
-          <span className={s.nickname}>Fedya</span>
-
-          <div className={s.description}>“Kuku Epta. EZ Task.”</div>
-        </div>
-      </div>
+      <div className={s.main__users}>{pros}</div>
     </div>
   );
 };

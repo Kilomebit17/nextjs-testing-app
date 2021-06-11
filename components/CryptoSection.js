@@ -1,17 +1,37 @@
+import { useState, useEffect } from "react";
 import style from "../styles/CryptoSection.module.scss";
 import Image from "next/image";
 import CryptoItem from "./CryptoItem";
 
-const CryptoSection = ({ data }) => {
+const CryptoSection = ({ data, refreshData }) => {
+  const [interval, setCurrentInterval] = useState(false);
+  useEffect(() => {
+    if (!interval) {
+      setCurrentInterval(
+        setInterval(() => {
+          refreshData(true);
+        }, 10000)
+      );
+    }
+  }, []);
+
   const cryptoItemNodeList = data.map(
-    ({ id, name, price, description, percent }) => {
+    ({
+      id,
+      name,
+      current_price,
+      description,
+      price_change_percentage_24h,
+      image,
+    }) => {
       return (
         <CryptoItem
           key={id}
+          image={image}
           name={name}
-          price={price}
+          price={current_price}
           description={description}
-          percent={percent}
+          percent={price_change_percentage_24h}
         />
       );
     }

@@ -2,7 +2,7 @@
   width: 250px;
 
   &__title {
-    color: #12121F;
+    color: #12121f;
     font-size: 13px;
     font-weight: 600;
   }
@@ -10,7 +10,15 @@
   &__price {
     display: flex;
     align-items: baseline;
-
+    .under_zero {
+      color: #4643d3;
+    }
+    .upper__zero {
+      color: #fe805c;
+    }
+    .upanddown {
+      padding-left: 5px;
+    }
     span {
       margin-left: 10px;
     }
@@ -19,14 +27,13 @@
       margin: 10px 0;
       font-size: 23px;
       font-weight: 600;
-      color: #12121F;
+      color: #12121f;
     }
-
   }
 }
 
 .description {
-  color: #AFAFBD;
+  color: #afafbd;
   font-size: 11px;
   display: block;
 }
