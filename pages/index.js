@@ -16,10 +16,10 @@ export default function Index({ data: _data }) {
     }
 
     (async () => {
-      const data = apiGetCurrency();
+      const currentData = await apiGetCurrency();
       setIsRefreshed(true);
-      if (data?.currency) {
-        setData(data);
+      if (currentData) {
+        setData(currentData);
       }
     })();
   }, [isRefreshed]);
