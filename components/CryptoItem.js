@@ -27,7 +27,7 @@ const CryptoItem = ({ name, price, description, percent }) => {
           />
         </div>
       </div>
-      <div className={style.description}>{description || "DESCRIPTION"}</div>
+      <div className={style.description}>{description || ""}</div>
     </React.Fragment>
   );
 };

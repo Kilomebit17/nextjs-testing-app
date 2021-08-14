@@ -30,8 +30,8 @@ export default function Index({ data: _data }) {
       <Header />
       <div className="container">
         <div className={style.under__header}>
-          <span>Do The Task</span>
-          <span>And Have Fun</span>
+          <span>Cryptocurrency</span>
+          <span>Kind of digital currency</span>
         </div>
 
         <CryptoSection data={data} refreshData={refreshData} />

@@ -9,18 +9,18 @@ const ProsSaying = () => {
         {
           img: { src: "/media/Nia.png", alt: "Picture of the author" },
           nickname: "Nia",
-          description: "“This task can be perfect for students from FIT””",
+          description: "“This task can be perfect for students from FIT”",
         },
         {
           img: { src: "/media/Abigale.png", alt: "Picture of the author" },
           nickname: "Abigale",
           description:
-            "“I am so sexy, that men are doing  test tasks for me for free.”“Kuku Epta. EZ Task.”",
+            "“I am so sexy, that men are doing  test tasks for me for free.”",
         },
         {
           img: { src: "/media/Fedya.png", alt: "Picture of the author" },
           nickname: "Fedya",
-          description: "“Kuku Epta. EZ Task.”",
+          description: "“some clever text”",
         },
       ].map((v) => <Pro {...v} />),
     []

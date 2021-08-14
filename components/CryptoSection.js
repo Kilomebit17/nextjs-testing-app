@@ -14,8 +14,7 @@ const CryptoSection = ({ data, refreshData }) => {
       );
     }
   }, []);
-
-  const cryptoItemNodeList = data.map(
+  const [first, second] = data.map(
     ({
       id,
       name,
@@ -63,12 +62,12 @@ const CryptoSection = ({ data, refreshData }) => {
         <h1>Be Persistent & Attentive To Details</h1>
         <div className={style.cryptoblock}>
           <div className={style.cryptoBlockLeft}>
-            <h2 className={style.fonts}>Fonts & Colors</h2>
+            <h2 className={style.fonts}>Bitcoin & Ethereum</h2>
             <span className={style.metter}>Metter</span>
-            <div className={style.ethereum}>{cryptoItemNodeList[1]}</div>
+            <div className={style.ethereum}>{second}</div>
           </div>
           <div className={style.cryptoBlockRight}>
-            <div className={style.bitcoin}>{cryptoItemNodeList[0]}</div>
+            <div className={style.bitcoin}>{first}</div>
           </div>
         </div>
       </div>
